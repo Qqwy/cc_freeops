@@ -14,7 +14,7 @@ to ensure that only those classes will have free operators added to them.
 
 Together, this ensures that an implementation of `operator+` like this:
 
-```c++11
+```c++
 template<typename T>
 inline auto operator+(T lhs, T const &rhs) ->
     typename std::enable_if<
