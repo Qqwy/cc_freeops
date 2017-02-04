@@ -10,13 +10,13 @@ public:
         d_data(data)
     {};
 
-    Foo & operator +=(Foo const &other)
+    Foo &operator +=(Foo const &other)
     {
         d_data += other.d_data;
         return (*this);
     }
 
-    Foo & operator /=(Foo const &other)
+    Foo &operator /=(Foo const &other)
     {
         d_data /= other.d_data;
         return (*this);
