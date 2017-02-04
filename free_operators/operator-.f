@@ -5,9 +5,10 @@ inline auto operator-(T lhs, T const &rhs) ->
     std::is_base_of<FreeOperators, T>::value,
     decltype(
         lhs.operator-=(rhs),
-        std::declval<T&>()
+        std::declval<T>()
         )
     >::type
 {
-    return lhs -= rhs;
+    lhs -= rhs;
+    return std::move(lhs);
 }

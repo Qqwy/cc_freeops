@@ -16,6 +16,13 @@ public:
         return (*this);
     }
 
+    Foo & operator /=(Foo const &other)
+    {
+        d_data /= other.d_data;
+        return (*this);
+    }
+
+
     void insert_into(std::ostream &out) const
     {
         out << '[' << d_data << ']';
@@ -26,6 +33,6 @@ int main()
 {
     Foo bar{1};
     Foo baz{2};
-    Foo qux = bar + baz;
-    std::cout << qux;
+    Foo qux = bar + baz / baz;
+    std::cout << qux << '\n';
 }

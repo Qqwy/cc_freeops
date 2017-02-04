@@ -17,6 +17,12 @@ class FreeOperators
 #include "operator-.f"
 #include "operator*.f"
 #include "operator_div.f"
+#include "operator%.f"
+#include "operator|.f"
+#include "operator&.f"
+#include "operator^.f"
+#include "operator>>.f"
+#include "operator<<.f"
 #include "operator_insert.f"
 #include "operator_extract.f"
 
