@@ -1,6 +1,12 @@
 # C++ Free Operators
 An implementation of automatic free binary operator generation when their respective compound operators are known.
 
+## Why is this useful
+
+Defining free operators is a hassle because it requires writing a lot of error-prone repetitive boilerplate.
+We want most binary operators to be defined as _free_ operators so that regardless of your class being used as first
+or as second parameter, automatic conversion will have a chance of happening.
+
 ## How does it work:
 
 The following nice Template Metaprogramming techniques are used:
@@ -36,10 +42,10 @@ is only added to a class `Foo` if:
 - `Foo` is a child class of `FreeOperators`.
 
 
-This has been used in this simple library to define the following operators:
+This has been used in this simple library to define the following free operators:
 
 - `+` if `+=` is defined.
-- `-` if `i=` is defined.
+- `-` if `-=` is defined.
 - `*` if `*=` is defined.
 - `/` if `/=` is defined.
 - `%` if `%=` is defined.
